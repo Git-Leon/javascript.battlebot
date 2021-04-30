@@ -1,6 +1,6 @@
-import { RobotEnvironment } from './src/main/RobotEnvironment.mjs';
+import { RobotEnvironment } from '../main/RobotEnvironment.mjs';
 
-function main() {
+export function testBattle() {
     // given
     let env = new RobotEnvironment();
     while(!env.isBattleOver()) {
@@ -15,4 +15,5 @@ function main() {
     console.log("Enemies wins = " + env.isEnemiesDead())
 }
 
-main();
+
+testBattle();
