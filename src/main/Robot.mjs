@@ -9,11 +9,11 @@ export class Robot {
     attack(robot) {        
         if(this.hitpoints > 0) {
             console.log("[" + this.name + "] is attacking [" + robot.name  + "] for [" + this.firepower + "] amount of damage.")
-            robot.decreaseHull(this.firepower);
+            robot.decreaseHitPoints(this.firepower);
         }
     }
 
-    decreaseHull(decreaseAmount) {
+    decreaseHitPoints(decreaseAmount) {
         this.hitpoints -= decreaseAmount;
         console.log("[" + this.name + "] was attacked. New Hitpoint amount is [" + this.hitpoints + "]");
     }
