@@ -11,7 +11,6 @@ export function testAttack() {
     let enemy5 = factory.createEnemy("Chris");
     let enemy6 = factory.createEnemy("Asia");
     let enemyArray = [enemy1,enemy2,enemy3,enemy4,enemy5,enemy6];
-
     
     // when
     enemyArray.forEach(enemy => {
