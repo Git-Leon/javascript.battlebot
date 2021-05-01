@@ -1,8 +1,8 @@
-import { RobotEnvironment } from '../main/RobotEnvironment.mjs';
+import { RobotBattleGround } from '../main/RobotBattleGround.mjs';
 
 export function testBattle() {
     // given
-    let env = new RobotEnvironment();
+    let env = new RobotBattleGround();
     while(!env.isBattleOver()) {
 
         // when

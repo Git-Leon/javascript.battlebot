@@ -1,5 +1,5 @@
 import { RobotFactory } from './RobotFactory.mjs';
-export class RobotEnvironment {
+export class RobotBattleGround {
     constructor() {
         let factory = new RobotFactory();
         this.hero = factory.createGuardian();
