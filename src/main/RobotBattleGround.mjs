@@ -13,27 +13,18 @@ export class RobotBattleGround {
     }
 
     battle() {
+        console.log("A battle has began.")
         this.enemies.forEach(enemy => {
             this.hero.attack(enemy);
             enemy.attack(this.hero);
         });
     }
 
-    isHeroDead() {
-        return this.hero.hitpoints <= 0;
-    }
-    
-    isEnemiesDead() {
-        let isEnemiesDead = true;
-        this.enemies.forEach(enemy => {
-            if(enemy.hitpoints > 0) {
-                isEnemiesDead = false;
-            }
-        });
-        return  isEnemiesDead;
-    }
-
     isBattleOver() {
-        return this.isHeroDead() || this.isEnemiesDead();
+        this.enemies = this.enemies.filter(enemy => enemy.hitpoints > 0);
+        let isEnemyDead = this.enemies.length == 0;
+        let isHeroDead = this.hero.hitpoints <= 0;
+        let isOver = isEnemyDead || isHeroDead;
+        return isOver;
     }
 }

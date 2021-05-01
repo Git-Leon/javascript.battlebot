@@ -3,7 +3,7 @@ import { Robot } from './Robot.mjs';
 
 export class RobotFactory {
     createEnemy(name) {
-        let hitpoints = createRandomNumber(3,15);
+        let hitpoints = createRandomNumber(3,10);
         let firePower = createRandomNumber(2,4);
         let accuracy = createRandomNumber(.6,.8);
         let newEnemy = new Robot(name, hitpoints, firePower, accuracy);
